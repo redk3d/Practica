@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      background-color: #222;
+    }
+
+    .game-container {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .character {
+      width: 64px; 
+      height: 64px; 
+      background-image: url('https://rocketmen.com.ua/public/cache/480x155/image5.webp'); 
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="game-container">
+    <div class="character"></div>
+  </div>
+
+  <script>
+    const character = document.querySelector('.character');
+    const frameWidth = 64; 
+    const totalFrames = 6; 
+    let currentFrame = 0;
+    let positionX = 0;
+
+    function updateAnimation() {
+      currentFrame = (currentFrame + 1) % totalFrames;
+      character.style.backgroundPosition = `-${currentFrame * frameWidth}px 0`;
+
+      positionX += 5;
+      if (positionX > window.innerWidth) {
+        positionX = -frameWidth;
+      }
+      character.style.left = `${positionX}px`;
+    }
+
+    setInterval(updateAnimation, 100);
+  </script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Описание конкурса "Космические поделки" - Моя семья – мой космос</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header, .footer {
+            background-color: #252525;
+            padding: 15px 20px;
+            text-align: center;
+        }
+        .header a, .footer a {
+            color: #007bff;
+            margin: 0 10px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        .competition-image {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        h1 { color: #fff; }
+        .stats {
+            margin: 20px 0;
+        }
+        .stat-item {
+            display: inline-block; 
+            margin-right: 30px;
+            font-size: 18px;
+        }
+        .stat-item .icon { 
+            color: #ffd700;
+            font-size: 24px;
+        }
+
+        @media print {
+            .header, .footer, .stats, .no-print {
+                display: none;
+            }
+            
+            .print-only-review {
+                display: block;
+                border: 1px solid #ccc;
+                padding: 15px;
+                margin-top: 20px;
+            }
+            
+            body {
+                background-color: #fff; 
+                color: #000; 
+                font-family: serif; 
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            .competition-image {
+                filter: grayscale(100%);
+            }
+
+            h1 {
+                color: #000;
+            }
+            a {
+                text-decoration: none;
+                color: #000;
+            }
+        }
+
+        .print-only-review {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="header">
+        <a href="index.html">Главная</a>
+        <a href="schedule.html">Расписание</a>
+        <a href="account.html">Личный кабинет</a>
+    </header>
+
+    <div class="container">
+        <h1>"Космические поделки": создай свою планету</h1>
+        <img class="competition-image" src="https://images.techinsider.ru/upload/img_cache/7c1/7c16b5a23f92c7fb876cee1daf4a00cb_cropped_666x497.jpg" width="400">
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="icon">★★★★★</span> Рейтинг
+            </div>
+            <div class="stat-item">
+                <span class="icon">👤</span> 18/20 записались
+            </div>
+        </div>
+        
+        <h2>Описание конкурса</h2>
+        <p>Дайте волю своей фантазии! В этом конкурсе мы предлагаем семьям объединить усилия и создать модель собственной, уникальной планеты. Используйте любые материалы: пластилин, картон, фольгу, краски, природные материалы. Расскажите историю вашей планеты: кто на ней живет, какая там природа, какие тайны она хранит?</p>
+        <p>Лучшие работы будут выставлены на специальной "Аллее планет", а победители получат ценные призы от наших космических партнеров.</p>
+        
+        <a href="account.html" class="no-print" style="background-color:#007bff; color:white; padding:10px 20px; text-decoration:none; border-radius:5px;">Записаться на этот конкурс</a>
+
+        <div class="print-only-review">
+            <h3>Отзыв участника (Прошлый год)</h3>
+            <p><strong>Семья Петровых:</strong> <em>"Наш сын был в полном восторге! Мы провели целый вечер, создавая нашу 'Планету сладостей'. Это было очень весело и сплотило нас. Отличная идея для конкурса!"</em></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Моя семья – мой космос</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание конкурсов - Моя семья – мой космос</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 90%;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+        }
+
+        .schedule-wrapper {
+            overflow-x: auto; 
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse; 
+            min-width: 1200px; 
+        }
+
+        .schedule-table th, .schedule-table td {
+            border: 1px solid #444;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .schedule-table th {
+            background-color: #333;
+        }
+
+        .schedule-table .competition-name {
+            text-align: left;
+            font-weight: bold;
+            background-color: #2c2c2c;
+            min-width: 200px;
+        }
+
+        .slot {
+            width: 70px; 
+            height: 70px;
+            vertical-align: middle;
+            background-color: #25a244; 
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .slot.full {
+            background-color: #d90429; 
+            color: #f0f0f0;
+        }
+        .slot.empty {
+            background-color: #2a2a2a;
+        }
+        
+        .footer-link {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer-link a {
+            color: #007bff;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Расписание конкурсов</h1>
+        <p style="text-align: center;">Ниже представлена таблица с доступными временными слотами для каждого конкурса. Зеленым отмечены слоты, где есть свободные места, красным - где запись завершена.</p>
+        
+        <div class="schedule-wrapper">
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Конкурс</th>
+                        <th>09:00-10:00</th>
+                        <th>10:00-11:00</th>
+                        <th>11:00-12:00</th>
+                        <th>12:00-13:00</th>
+                        <th>13:00-14:00</th>
+                        <th>14:00-15:00</th>
+                        <th>15:00-16:00</th>
+                        <th>16:00-17:00</th>
+                        <th>17:00-18:00</th>
+                        <th>18:00-19:00</th>
+                        <th>19:00-20:00</th>
+                        <th>20:00-21:00</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="competition-name">Конкурс семейного рисунка "Наш космос"</td>
+                        <td class="slot">5</td>
+                        <td class="slot">3</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">2</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">8</td>
+                        <td class="slot">4</td>
+                        <td class="slot full">0</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">1</td>
+                        <td class="slot">5</td>
+                        <td class="slot full">0</td>
+                    </tr>
+                    <tr>
+                        <td class="competition-name">"Космические поделки": создай свою планету</td>
+                        <td class="slot full">0</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">1</td>
+                        <td class="slot">4</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">6</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">2</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">3</td>
+                        <td class="slot">7</td>
+                        <td class="slot">4</td>
+                    </tr>
+                    <tr>
+                        <td class="competition-name">Фотоконкурс "Моя семья - моя галактика"</td>
+                        <td class="slot">10</td>
+                        <td class="slot">12</td>
+                        <td class="slot">8</td>
+                        <td class="slot">5</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">15</td>
+                        <td class="slot">9</td>
+                        <td class="slot">3</td>
+                        <td class="slot empty"></td>
+                        <td class="slot full">0</td>
+                        <td class="slot">6</td>
+                        <td class="slot">11</td>
+                    </tr>
+                    <tr>
+                        <td class="competition-name">Литературный конкурс "Рассказ о космическом путешествии"</td>
+                        <td class="slot">4</td>
+                        <td class="slot">6</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">1</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">3</td>
+                        <td class="slot">5</td>
+                        <td class="slot">2</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">7</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">3</td>
+                    </tr>
+                     <tr>
+                        <td class="competition-name">Конкурс на лучший космический костюм</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">1</td>
+                        <td class="slot">2</td>
+                        <td class="slot full">0</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">3</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">1</td>
+                        <td class="slot empty"></td>
+                        <td class="slot">2</td>
+                        <td class="slot full">0</td>
+                        <td class="slot">1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="footer-link">
+            <a href="index.html">Вернуться на главную</a>
+        </div>
+    </div>
+</body>
+</html>

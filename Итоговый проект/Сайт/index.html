@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя семья – мой космос</title>
+    <style>
+        @font-face {
+            font-family: 'Montserrat';
+            src: url('media/fonts/Montserrat-Regular.ttf') format('truetype');
+        }
+
+        body {
+            background-color: #1a1a1a; 
+            color: #f0f0f0; 
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #252525;
+            padding: 10px 20px;
+            border-bottom: 1px solid #444;
+            display: inline-block; 
+            width: calc(100% - 40px); 
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            float: left;
+        }
+
+        .nav {
+            float: right;
+            margin-top: 5px; 
+        }
+
+        .nav-list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .nav-list li {
+            display: inline-block; 
+            margin-left: 15px;
+        }
+
+        .nav-list a {
+            color: #f0f0f0;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .theme-switcher a {
+            background-color: #fff;
+            color: #1a1a1a;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .section {
+            padding: 40px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .slider-wrapper {
+            border: 2px solid #555;
+            padding: 20px;
+            text-align: center;
+        }
+        .slider-image {
+            max-width: 100%;
+            height: auto;
+        }
+        .slider-rating {
+            font-size: 24px;
+            color: #ffd700; 
+        }
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        #auth-section {
+            background-color: #2a2a2a;
+            padding: 30px;
+            border-radius: 8px;
+        }
+        .auth-form input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #333;
+            border: 1px solid #555;
+            color: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .about-us-content {
+            text-align: center;
+        }
+        .about-us-image {
+            max-width: 300px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .video-container {
+            text-align: center;
+        }
+        .video-container video {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        
+        .competitions-grid {
+             text-align: center; 
+        }
+        .competition-card {
+            width: 30%; 
+            display: inline-block;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 1%;
+            vertical-align: top;
+            box-sizing: border-box; 
+        }
+        .competition-card img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .search-form input {
+            width: 70%;
+            padding: 10px;
+        }
+
+        .reviews-slider {
+            overflow: hidden;
+            white-space: nowrap; 
+        }
+        .review-card {
+            width: 80%; 
+            display: inline-block;
+            background-color: #2a2a2a;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 8px;
+            white-space: normal; 
+            vertical-align: top;
+        }
+        .review-card img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            float: left;
+            margin-right: 15px;
+        }
+        
+        .subscription-form {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+        }
+        .subscription-form h2 {
+            font-family: 'Georgia', serif; 
+            font-size: 32px;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .subscription-form input[type="email"] {
+            padding: 15px;
+            width: 60%;
+            border: none;
+            border-radius: 30px;
+            margin-right: 10px;
+        }
+        .subscription-form button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 30px;
+            background-color: #ffc107;
+            color: #000;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .consent {
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .consent input {
+            margin-right: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #252525;
+        }
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 796px) {
+            .header {
+                text-align: center;
+            }
+            .logo, .nav {
+                float: none; 
+                display: block; 
+                margin-bottom: 10px;
+            }
+            .nav-list li {
+                display: block; 
+                margin: 10px 0;
+            }
+
+            .competition-card {
+                width: 90%; 
+                margin: 10px auto;
+                display: block;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
+
+            .subscription-form input[type="email"],
+            .subscription-form button {
+                width: 80%;
+                margin: 10px 0 0 0;
+                display: block; 
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            Моя Семья - Мой Космос
+        </div>
+        <nav class="nav">
+            <ul class="nav-list">
+                <li><a href="registration.html">Регистрация</a></li>
+                <li><a href="#auth-section">Авторизация</a></li>
+                <li><a href="account.html">Личный кабинет</a></li>
+                <li><a href="#about-section">О нас</a></li>
+                <li><a href="#competitions-section">Конкурсы</a></li>
+                <li><a href="#search-section">Поиск</a></li>
+                <li><a href="#footer-section">Контакты</a></li>
+                <li class="theme-switcher"><a href="index-light.html">Светлая тема</a></li>
+            </ul>
+        </nav>
+        <div style="clear: both;"></div> 
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2>Популярные конкурсы</h2>
+            <div class="slider-wrapper">
+                <img class="slider-image" src="https://www.karusel-tv.ru/media/suit/preview_full/media/image/2021/08/1628241486708577_1.png" height="700" width="700">
+                <h3>Конкурс "Космическое приключение"</h3>
+                <p>Постройте свою собственную ракету из подручных материалов и отправьтесь в путешествие по галактике!</p>
+                <div class="slider-rating">★★★★★</div>
+                <p>
+                    <button disabled></button> 
+                    <button>></button>
+                </p>
+                <a href="competition.html" class="btn">Подробнее</a>
+            </div>
+        </section>
+
+        <section id="auth-section" class="section">
+            <h2>Вход на сайт</h2>
+            <form class="auth-form">
+                <input type="email" placeholder="Ваш Email" required>
+                <input type="password" placeholder="Пароль" required>
+                <button type="submit" class="btn">Войти</button>
+                <p style="text-align: center;"><a href="#">Забыли пароль?</a></p>
+            </form>
+        </section>
+
+        <section id="about-section" class="section">
+            <div class="about-us-content">
+                <h2>О нас</h2>
+                <p>Мы — команда энтузиастов, которая верит, что каждая семья — это целая вселенная, полная открытий, талантов и приключений. Наше мероприятие "Моя семья – мой космос" создано для того, чтобы помочь вам раскрыть этот потенциал!</p>
+                <img class="about-us-image" src="https://rsv.ru/blog/wp-content/uploads/2023/06/2-1-918x516.jpg">
+            </div>
+        </section>
+        
+        <section id="video-section" class="section">
+            <h2>Приветствие от организаторов</h2>
+            <div class="video-container">
+                <video src="media/video/hello.mp4" controls poster="media/images/video_poster.jpg">
+                    Ваш браузер не поддерживает видео.
+                </video>
+            </div>
+        </section>
+
+        <section id="competitions-section" class="section">
+            <h2>Все конкурсы</h2>
+            <div class="competitions-grid">
+                <div class="competition-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqvdP3x9ockt-R4YtnIxl0hddOXSauYCcVgA&s" width="200">
+                    <h3>Звездные повара</h3>
+                    <p>Приготовьте блюдо на космическую тематику.</p>
+                    <p>Записей: 15/20</p>
+                    <p>Рейтинг: ★★★★☆</p>
+                    <a href="account.html" class="btn">Записаться</a>
+                </div>
+                <div class="competition-card">
+                    <img src="https://preview.redd.it/a-more-luxurious-family-inclusive-sovereign-class-starship-v0-sazvtvq7346b1.jpg?width=640&crop=smart&auto=webp&s=0657e1b878123cb2fa8b149694e7bdbe71e85a7d" width="600">
+                    <h3>Семейный звездолет</h3>
+                    <p>Создайте модель космического корабля.</p>
+                    <p>Записей: 18/20</p>
+                    <p>Рейтинг: ★★★★★</p>
+                    <a href="account.html" class="btn">Записаться</a>
+                </div>
+                <div class="competition-card">
+                    <img src="https://mcgalaktika.ru/wp-content/uploads/2025/02/77ea417b-6674-4632-b986-85a7eb8ffd05-2-1-1024x576.jpg">
+                    <h3>Галактика талантов</h3>
+                    <p>Творческий номер от всей семьи.</p>
+                    <p>Записей: 10/15</p>
+                    <p>Рейтинг: ★★★★☆</p>
+                    <a href="account.html" class="btn">Записаться</a>
+                </div>
+                 <div class="competition-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2bONkj7RFlgZcIWq4k9nM6Sa3ei5yqxUFvQ&s">
+                    <h3>Инопланетный костюм</h3>
+                    <p>Самый оригинальный костюм пришельца.</p>
+                    <p>Записей: 19/20</p>
+                    <p>Рейтинг: ★★★★☆</p>
+                    <a href="account.html" class="btn">Записаться</a>
+                </div>
+                 <div class="competition-card">
+                    <img src="https://markova.navmousosh-2.edusite.ru/images/hello_html_m503f5da4.gif" width="265">
+                    <h3>Космическая викторина</h3>
+                    <p>Проверьте свои знания о космосе.</p>
+                    <p>Записей: 25/30</p>
+                    <p>Рейтинг: ★★★☆☆</p>
+                    <a href="account.html" class="btn">Записаться</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="search-section" class="section">
+            <h2>Быстрый поиск конкурсов</h2>
+            <form class="search-form">
+                <input type="search" placeholder="Название или описание конкурса...">
+                <button type="submit" class="btn">Поиск</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Отзывы участников</h2>
+            <div class="reviews-slider">
+                <div class="review-card">
+                    <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSgQ1ENhP5Y3HA_MrbljjxUB_dyTsgVbfheh6mZyOmXM2sOotuS">
+                    <h4>Анна Иванова</h4>
+                    <p>"Это было невероятно! Мои дети в восторге от конкурса 'Семейный звездолет'. Обязательно придем еще!"</p>
+                    <span>Дата: 15.06.2025</span><br>
+                    <a href="competition.html">О конкурсе</a>
+                </div>
+
+        <section class="section">
+            <div class="subscription-form">
+                <h2>Подпишитесь на наши новости!</h2>
+                <p>Узнавайте первыми о новых конкурсах и мероприятиях.</p>
+                <form>
+                    <input type="email" placeholder="Ваш Email" required>
+                    <button type="submit">Подписаться</button>
+                    <div class="consent">
+                        <label>
+                            <input type="checkbox" required> Я согласен на обработку персональных данных
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="footer-section" class="footer">
+        <p>Наши контакты:</p>
+        <p>Телефон: <a href="tel:+74842234567">+7 (4842) 23-45-67</a></p>
+        <p>E-mail: <a href="mailto:family@cosmos.ru">family@cosmos.ru</a></p>
+        <hr style="border-color: #444;">
+        <p>Навигация по сайту:</p>
+        <a href="index.html">Главная</a>
+        <a href="registration.html">Регистрация</a>
+        <a href="competition.html">Конкурс</a>
+        <a href="account.html">Личный кабинет</a>
+        <a href="404.html">Страница не найдена</a>
+    </footer>
+
+</body>
+</html>
